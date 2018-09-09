@@ -239,11 +239,9 @@ client.user.setAvatar(argresult);
 if (message.content.startsWith(adminprefix + 'setT')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
+}
 
-    }
-    else if (mess.startsWith(prefix + 'تعال')) {
-        message.member.voiceChannel.join().then(message.channel.send(':ok:'));
-    }	
+});
 
 client.on("message", message => {
  if (message.content === `${prefix}`) {
@@ -262,7 +260,17 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
  `)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
    message.channel.sendEmbed(embed)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     
+   }
+   }); 
+     client.on('message', message => {
+  if (!message.guild) return;
 
+  if (message.content === 'ادخل') {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+        .then(connection => { 
+ 
+});
 	
  
  client.login(process.env.BOT_TOKEN);

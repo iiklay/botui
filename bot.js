@@ -242,6 +242,23 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 }
 
 });
+   }
+   }); 
+     client.on('message', message => {
+  if (!message.guild) return;
+
+  if (message.content === 'ادخل') {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+        .then(connection => { 
+          message.reply('لقد دخلت الروم بنجاح !');
+        })
+        .catch(console.log);
+    } else {
+      message.reply('يجب ان تكون في روم صوتي');
+    }
+  }
+});
 
 client.on("message", message => {
  if (message.content === `${prefix}`) {
@@ -260,23 +277,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
  `)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
    message.channel.sendEmbed(embed)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     
-   }
-   }); 
-     client.on('message', message => {
-  if (!message.guild) return;
 
-  if (message.content === 'ادخل') {
-    if (message.member.voiceChannel) {
-      message.member.voiceChannel.join()
-        .then(connection => { 
-          message.reply('لقد دخلت الروم بنجاح !');
-        })
-        .catch(console.log);
-    } else {
-      message.reply('يجب ان تكون في روم صوتي');
-    }
-  }
-});
 	
  
  client.login(process.env.BOT_TOKEN);

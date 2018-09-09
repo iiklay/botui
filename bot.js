@@ -76,7 +76,7 @@ client.on('message', async msg => { // eslint-disable-line
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-					.setFooter("HP")
+					.setFooter("HP ")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
@@ -260,17 +260,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
  `)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
    message.channel.sendEmbed(embed)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
     
-   }
-   }); 
-     client.on('message', message => {
-  if (!message.guild) return;
-
-  if (message.content === 'ادخل') {
-    if (message.member.voiceChannel) {
-      message.member.voiceChannel.join()
-        .then(connection => { 
- 
-});
+;
 	
  
  client.login(process.env.BOT_TOKEN);

@@ -242,7 +242,6 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
     }
     else if (mess.startsWith(prefix + 'تعال')) {
-        if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.member.voiceChannel.join().then(message.channel.send(':ok:'));
     }	
 
